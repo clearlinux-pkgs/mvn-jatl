@@ -4,7 +4,7 @@
 #
 Name     : mvn-jatl
 Version  : 0.2.2
-Release  : 1
+Release  : 2
 URL      : https://github.com/agentgt/jatl/archive/jatl-0.2.2.tar.gz
 Source0  : https://github.com/agentgt/jatl/archive/jatl-0.2.2.tar.gz
 Source1  : https://repo.gradle.org/gradle/libs-releases/com/googlecode/jatl/jatl/0.2.2/jatl-0.2.2.jar
