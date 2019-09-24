@@ -4,16 +4,20 @@
 #
 Name     : mvn-jatl
 Version  : 0.2.2
-Release  : 2
+Release  : 3
 URL      : https://github.com/agentgt/jatl/archive/jatl-0.2.2.tar.gz
 Source0  : https://github.com/agentgt/jatl/archive/jatl-0.2.2.tar.gz
 Source1  : https://repo.gradle.org/gradle/libs-releases/com/googlecode/jatl/jatl/0.2.2/jatl-0.2.2.jar
 Source2  : https://repo.gradle.org/gradle/libs-releases/com/googlecode/jatl/jatl/0.2.2/jatl-0.2.2.pom
+Source3  : https://repo.gradle.org/gradle/libs-releases/com/googlecode/jatl/jatl/0.2.3/jatl-0.2.3.jar
+Source4  : https://repo.gradle.org/gradle/libs-releases/com/googlecode/jatl/jatl/0.2.3/jatl-0.2.3.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: mvn-jatl-data = %{version}-%{release}
 Requires: mvn-jatl-license = %{version}-%{release}
+BuildRequires : apache-maven
+BuildRequires : buildreq-mvn
 
 %description
 No detailed description available
@@ -48,6 +52,12 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/com/googlecode/jatl/jat
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/googlecode/jatl/jatl/0.2.2
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/com/googlecode/jatl/jatl/0.2.2/jatl-0.2.2.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/googlecode/jatl/jatl/0.2.3
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/com/googlecode/jatl/jatl/0.2.3/jatl-0.2.3.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/googlecode/jatl/jatl/0.2.3
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/com/googlecode/jatl/jatl/0.2.3/jatl-0.2.3.pom
+
 
 %files
 %defattr(-,root,root,-)
@@ -56,6 +66,8 @@ cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/com/googlecode/jatl/jat
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/com/googlecode/jatl/jatl/0.2.2/jatl-0.2.2.jar
 /usr/share/java/.m2/repository/com/googlecode/jatl/jatl/0.2.2/jatl-0.2.2.pom
+/usr/share/java/.m2/repository/com/googlecode/jatl/jatl/0.2.3/jatl-0.2.3.jar
+/usr/share/java/.m2/repository/com/googlecode/jatl/jatl/0.2.3/jatl-0.2.3.pom
 
 %files license
 %defattr(0644,root,root,0755)
